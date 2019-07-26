@@ -1,5 +1,5 @@
 {
-    "skeletons": {
+    "list": {
         "php": {
             "repo": "https://github.com/roliod/packageton-php"
         },

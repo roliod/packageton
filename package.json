@@ -4,7 +4,7 @@
   "description": "A skeleton structure for package creation.",
   "main": "src/cli.js",
   "scripts": {
-    "test": "npm test",
+    "test": "mocha",
     "lint": "eslint ."
   },
   "repository": {
@@ -26,10 +26,13 @@
   },
   "dependencies": {
     "arg": "^4.1.1",
+    "chalk": "^2.4.2",
     "esm": "^3.2.25",
-    "inquirer": "^6.5.0"
+    "inquirer": "^6.5.0",
+    "ncp": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.1.0"
+    "eslint": "^6.1.0",
+    "mocha": "^6.2.0"
   }
 }
