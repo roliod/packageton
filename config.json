@@ -1,0 +1,10 @@
+{
+    "skeletons": {
+        "php": {
+            "repo": "https://github.com/roliod/packageton-php"
+        },
+        "npm": {
+            "repo": "https://github.com/roliod/packageton-npm"
+        }
+    }
+}
