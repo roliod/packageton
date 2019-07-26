@@ -4,7 +4,8 @@
   "description": "A skeleton structure for package creation.",
   "main": "src/cli.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
     "arg": "^4.1.1",
     "esm": "^3.2.25",
     "inquirer": "^6.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0"
   }
 }
