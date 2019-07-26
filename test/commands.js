@@ -9,7 +9,6 @@ describe('Commands', function() {
         var commandListKeys = Object.keys(commandList[key]);
         assert.equal(commandListKeys.includes('shortcut', 'description'), true);
       }
-      assert.equal([1, 2, 3].indexOf(4), -1);
     });
   });
 });
