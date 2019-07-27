@@ -1,19 +1,15 @@
 {
     "list": {
         "create": {
-            "shortcut": "--c",
             "description": "Create a new package skeleton."
         },
         "help": {
-            "shortcut": "--h",
             "description": "List of available commands with description."
         },
         "version": {
-            "shortcut": "--v",
             "description": "Current sli version."
         },
         "list": {
-            "shortcut": "--l",
             "description": "List all supported skeletons."
         }
     }

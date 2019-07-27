@@ -18,9 +18,12 @@ install:
 update:
 	npm update
 
-## Run test
-update:
+## Run all unit tests
+unit-test:
 	npm test
+
+## Run all tests
+test: unit-test
 
 ## Run static code analysis
 analyse-code:

@@ -1,5 +1,6 @@
 import arg from 'arg';
 import chalk from 'chalk';
+import npmlog from 'npmlog';
 
 function parseArgumentsIntoOptions() {
   const args = arg(
@@ -8,14 +9,29 @@ function parseArgumentsIntoOptions() {
     }
   );
 
-  // let command = args._[0];
+  let chosenCommand = args._[0];
   let skeletonType = args._[1];
   let validator = require('./validator.js');
+  let commands = require('./commands.js');
 
+  /**
+   * Validate chosen command
+   */
   try {
-    validator.skeletons(skeletonType);
+    validator.command(chosenCommand);
   } catch (err) {
-    console.error(chalk.red.bold(err.message));
+    npmlog.warn('', chalk.red.bold(err.message));
+    commands.list();
+    process.exit(1);
+  }
+
+  /**
+   * Validate skeleton
+   */
+  try {
+    validator.skeleton(skeletonType);
+  } catch (err) {
+    npmlog.warn('', chalk.red.bold(err.message));
     process.exit(1);
   }
 
@@ -27,5 +43,5 @@ function parseArgumentsIntoOptions() {
 
 export function cli(args) {
   let options = parseArgumentsIntoOptions(args);
-  console.log(options);
+  process.stdout.write(options);
 }
