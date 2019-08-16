@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Validate a skeletons existence
  *
@@ -17,29 +15,6 @@ exports.skeleton = function (type) {
     if (skeletonIsAvailable === false) {
         throw new Error(
             'We currently do not have support for `' + type + '`'
-        );
-    }
-
-    return true;
-}
-
-/**
- * Validate a commands existence
- *
- * @param string type
- * 
- * @returns bool
- * 
- * @throws Error
- */
-exports.command = function (commandName) {
-    let commandConfig = require('./config/commands.json');
-    let availableCommands = Object.keys(commandConfig.list);
-    let commandExists = availableCommands.includes(commandName);
-
-    if (commandExists === false) {
-        throw new Error(
-            'Command `' + commandName + '` does not exist'
         );
     }
 

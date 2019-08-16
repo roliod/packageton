@@ -20,7 +20,7 @@ update:
 
 ## Run all unit tests
 unit-test:
-	npm test
+	mocha
 
 ## Run all tests
 test: unit-test

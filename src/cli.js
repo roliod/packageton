@@ -1,47 +1,34 @@
-import arg from 'arg';
-import chalk from 'chalk';
-import npmlog from 'npmlog';
+#!/usr/bin/env node
 
-function parseArgumentsIntoOptions() {
-  const args = arg(
-    {
-      '--create': Boolean,
+const program = require('commander');
+
+program
+  .version('1.0.0');
+
+program
+  .command('create <skeleton>')
+  .description('create a new package skeleton.')
+  .action((skeleton) => {
+    let validator = require('./validator.js');
+    /**
+     * Validate chosen command and then route to executor.
+     */
+    try {
+      validator.skeleton(skeleton);
+      // router.commandExecutor(skeleton);
+      console.log(skeleton);
+      process.exit(1);
+    } catch (err) {
+      console.log(err.message)
+      process.exit(1);
     }
-  );
+  });
 
-  let chosenCommand = args._[0];
-  let skeletonType = args._[1];
-  let validator = require('./validator.js');
-  let commands = require('./commands.js');
+  program
+  .command('list')
+  .description('list all available skeletons.')
+  .action(() => {
 
-  /**
-   * Validate chosen command
-   */
-  try {
-    validator.command(chosenCommand);
-  } catch (err) {
-    npmlog.warn('', chalk.red.bold(err.message));
-    commands.list();
-    process.exit(1);
-  }
+  });
 
-  /**
-   * Validate skeleton
-   */
-  try {
-    validator.skeleton(skeletonType);
-  } catch (err) {
-    npmlog.warn('', chalk.red.bold(err.message));
-    process.exit(1);
-  }
-
-  return {
-    skeleton: args._[1],
-    command: args._[0],
-  };
-}
-
-export function cli(args) {
-  let options = parseArgumentsIntoOptions(args);
-  process.stdout.write(options);
-}
+program.parse(process.argv);

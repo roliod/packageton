@@ -22,15 +22,17 @@
   },
   "homepage": "https://github.com/roliod/packageton#readme",
   "bin": {
-    "packageton": "./bin/packageton"
+    "packageton": "src/cli.js"
   },
   "dependencies": {
     "arg": "^4.1.1",
     "chalk": "^2.4.2",
+    "commander": "^3.0.0",
     "esm": "^3.2.25",
+    "figlet": "^1.2.3",
     "inquirer": "^6.5.0",
-    "ncp": "^2.0.0",
-    "npmlog": "^4.1.2"
+    "log-symbols": "^3.0.0",
+    "ncp": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^6.1.0",
