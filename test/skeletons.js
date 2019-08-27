@@ -7,7 +7,7 @@ describe('Skeletons', function() {
       assert.equal(Object.keys(skeletons).includes('list'), true);
 
       let skeletonList = skeletons.list;
-      for (key in skeletonList) {
+      for (let key in skeletonList) {
         let skeletonListKeys = Object.keys(skeletonList[key]);
         assert.equal(skeletonListKeys.includes('repo'), true);
       }

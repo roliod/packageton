@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+const logSymbols = require('log-symbols');
 
 program
   .version('1.0.0');
@@ -19,7 +20,7 @@ program
       console.log(skeleton);
       process.exit(1);
     } catch (err) {
-      console.log(err.message)
+      console.log(logSymbols.error, err.message)
       process.exit(1);
     }
   });
@@ -28,7 +29,8 @@ program
   .command('list')
   .description('list all available skeletons.')
   .action(() => {
-
+    let list = require('./commands/list.js');
+    list.all();
   });
 
 program.parse(process.argv);

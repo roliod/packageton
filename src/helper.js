@@ -1,4 +1,3 @@
-import util from 'util';
 import chalk from 'chalk';
 import figlet from 'figlet';
 
@@ -18,7 +17,7 @@ exports.defaultMessage = function() {
     constructCommandList();
 
     console.log(
-        packagetonText + '\n',
+        packagetonText + '\n',nnnnn
         chalk.yellow('Usage:') + '\n',
         constructUsage() + '\n',
         '\n',

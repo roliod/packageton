@@ -14,7 +14,7 @@ exports.skeleton = function (type) {
 
     if (skeletonIsAvailable === false) {
         throw new Error(
-            'We currently do not have support for `' + type + '`'
+            'We currently do not have support for `' + type + '` skeleton'
         );
     }
 
