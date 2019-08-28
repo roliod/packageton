@@ -11,13 +11,13 @@ program
   .description('create a new package skeleton.')
   .action((skeleton) => {
     let validator = require('./validator.js');
+    let create = require('./commands/create.js');
     /**
      * Validate chosen command and then route to executor.
      */
     try {
       validator.skeleton(skeleton);
-      // router.commandExecutor(skeleton);
-      console.log(skeleton);
+      create.skeleton(skeleton);
       process.exit(1);
     } catch (err) {
       console.log(logSymbols.error, err.message)
