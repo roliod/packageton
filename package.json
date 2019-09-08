@@ -30,10 +30,11 @@
     "commander": "^3.0.0",
     "esm": "^3.2.25",
     "figlet": "^1.2.3",
+    "git-clone-or-pull": "^3.1.1",
     "inquirer": "^6.5.0",
     "log-symbols": "^3.0.0",
     "ncp": "^2.0.0",
-    "node-cmd": "^3.0.0"
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "eslint": "^6.1.0",

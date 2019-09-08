@@ -1,7 +1,7 @@
 /**
  * List all available skeletons.
  * 
- * @returns string
+ * @returns void
  */
 exports.all = function () {
     let skeletons = require('../config/skeletons.json');
