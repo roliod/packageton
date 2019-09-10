@@ -18,5 +18,6 @@ exports.skeleton = function (skeleton) {
 
     shell.exec('git clone ' + repo + ' ' + folderName);
     shell.rm('-rf', './' + folderName + '/.git');
-    console.log(logSymbols.success, 'done');
+
+    console.log(logSymbols.success, 'Done');
 }

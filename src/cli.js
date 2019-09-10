@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const logSymbols = require('log-symbols');
 
 program
   .version('1.0.0');
@@ -10,6 +9,8 @@ program
   .command('create <skeleton>')
   .description('create a new package skeleton.')
   .action((skeleton) => {
+    let chalk = require('chalk');
+    let logSymbols = require('log-symbols');
     let validator = require('./validator.js');
     let create = require('./commands/create.js');
     /**
@@ -18,10 +19,11 @@ program
     try {
       validator.skeleton(skeleton);
       create.skeleton(skeleton);
-      process.exit(1);
     } catch (err) {
-      console.log(logSymbols.error, err.message)
-      process.exit(1);
+      console.error(
+        logSymbols.error, 
+        chalk.red(err.message)
+      )
     }
   });
 
