@@ -1,4 +1,4 @@
-let assert = require('assert');
+let assert = require('chai').assert;
 let skeletons = require('../src/config/skeletons.json');
 
 describe('Skeletons', function() {
