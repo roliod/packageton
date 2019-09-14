@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+const pjson = require('../package.json');
 
 program
-  .version('1.0.0');
+  .version(pjson.version);
 
 program
   .command('create <skeleton>')
