@@ -31,7 +31,6 @@
     "cmd": "^0.1.0",
     "commander": "^3.0.0",
     "esm": "^3.2.25",
-    "git-clone-or-pull": "^3.1.1",
     "inquirer": "^6.5.0",
     "log-symbols": "^3.0.0",
     "ncp": "^2.0.0",
