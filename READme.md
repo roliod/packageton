@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/roliod/packageton.svg?token=xLWRR38GPhFQuvaZTh9c&branch=master)](https://travis-ci.com/roliod/packageton)
 
-Packageton helps to create a skeleton structure which could be used to create pakages and modules.
+Packageton helps to create a skeleton structure which could as a base for a package or module.
 
 # Installation
 
