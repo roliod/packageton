@@ -1,6 +1,6 @@
 {
   "name": "packageton",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A skeleton structure for package creation.",
   "main": "src/cli.js",
   "scripts": {
