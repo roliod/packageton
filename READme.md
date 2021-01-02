@@ -23,6 +23,12 @@ $ npm install [-g] packageton
 $ packageton create {skeleton}
 ```
 
+# Create skeleton with a specific folder name
+
+```bash
+$ packageton create {skeleton} -f myFolderName
+```
+
 # Help
 
 See:
