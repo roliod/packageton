@@ -10,8 +10,10 @@ let skeletons = require('../config/skeletons');
  * 
  * @returns void
  */
-exports.skeleton = function (skeleton) {
-    let folderName = skeleton + '-skeleton';
+exports.skeleton = function (skeleton, options) {
+    let folderName = (options.folderName === undefined) 
+        ? skeleton + '-skeleton'
+        : options.folderName;
 
     let skeletonList = skeletons.list;
     let repo = skeletonList[skeleton].repo;

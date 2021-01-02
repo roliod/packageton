@@ -9,7 +9,8 @@ program
 program
   .command('create <skeleton>')
   .description('create a new package skeleton.')
-  .action((skeleton) => {
+  .option('-f, --folder-name [folderName]')
+  .action((skeleton, options) => {
     let chalk = require('chalk');
     let logSymbols = require('log-symbols');
     let validator = require('./validator.js');
@@ -19,7 +20,7 @@ program
      */
     try {
       validator.skeleton(skeleton);
-      create.skeleton(skeleton);
+      create.skeleton(skeleton, options);
     } catch (err) {
       console.error(
         logSymbols.error, 
